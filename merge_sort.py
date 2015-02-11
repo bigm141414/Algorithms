@@ -2,7 +2,7 @@ __author__ = 'bigm141414'
 #simple merge sort program in python
 
 #------------------------------------------------------------------------------
-unsorted = [2, 4, 7, 2, 1, 5, 6, 3, 0]
+unsorted = [2, 4, 7, 1, 5, 6, 3, 0]
 
 
 def merge_sort(array,n):
@@ -11,11 +11,13 @@ def merge_sort(array,n):
         print("end of subarray ")
 
     else:
-        left_half = array[:n/2]
-        right_half = array[n/2:]
+        print(n)
+        print(int(n/2))
+        left_half = array[:int(n/2)]
+        right_half = array[int(n/2):]
 
-        merge_sort(left_half, n/2)
-        merge_sort(right_half, n/2)
+        merge_sort(left_half, int(n/2))
+        merge_sort(right_half, int(n/2))
         k = 0
         i=0
         j=0
